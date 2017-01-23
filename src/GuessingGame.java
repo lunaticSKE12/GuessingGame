@@ -1,10 +1,13 @@
 import java.util.Random;
+
 /**
  * Game of gussing a secret number.
  * @author Napong Dungduangsasitorn
  *
  */
+
 public class GuessingGame {
+	
 	/* properties of a guessing game */
 	
 	private int upperBound;
@@ -16,6 +19,7 @@ public class GuessingGame {
 	 * Initialize a new game
 	 * @param uppperBound is the max value for the secret number (>1).
 	 */
+	
 	public GuessingGame(int uppperBound){
 		this.upperBound = upperBound;
 		this.secret = getRandomNumber(this.upperBound);
@@ -28,6 +32,7 @@ public class GuessingGame {
 	 * @param limit is the upper limit for random number 
 	 * @return a random number between 1 and limit (inclusive) 
 	 */ 
+	
 	private int getRandomNumber(int limit) { 
 		long seed = System.currentTimeMillis();
 		Random rand = new Random(seed);
@@ -40,25 +45,35 @@ public class GuessingGame {
 	 * @param number is number that user guess
 	 * @return true if correct false if not correct and show hint
 	 */
+	
 	public boolean guess (int number){
 		if(number == this.secret){
 			setHint("Correct. The secret is " + this.secret);
-			this.count++;
+			UpdateCount();
 			return true;
 		}
 		
 		else if(number < this.secret){
 			setHint("Sorry, your guess is too small");
-			this.count++;
+			UpdateCount();
 			return false;
 		}
 		else{
 			setHint("Sorry, your guess is too large");
-			this.count++;
+			UpdateCount();
 			return false;
 		}
 		
 	}
+	
+	/**
+	 * Update count how many play use to guess
+	 */
+	
+	public void UpdateCount(){
+		this.count++;
+	}
+	
 	/**
 	 * return based on the most recent guess
 	 * @return hint based on most recent guess
@@ -72,6 +87,7 @@ public class GuessingGame {
 	 * set hint message
 	 * @param hint is message that help user for guess number
 	 */
+	
 	protected void setHint(String hint){
 		this.hint = hint;
 		
@@ -81,6 +97,7 @@ public class GuessingGame {
 	 * return limit of guess number
 	 * @return upper bound of guess number
 	 */
+	
 	public int getUpperBound(){
 		return this.upperBound;
 	}
@@ -90,6 +107,7 @@ public class GuessingGame {
 	 * show how many times of user guess
 	 * @return number of guess
 	 */
+	
 	public int getCount(){
 		return this.count;
 	}

@@ -1,9 +1,11 @@
 import java.util.Scanner;
+
 /**
  * GameConsole is console of guessing game
  * @author Napong Dungduangsasitorn
  *
  */
+
 public class GameConsole {
 	
 	/**
@@ -11,6 +13,7 @@ public class GameConsole {
 	 * @param game is GuessingGame object 
 	 * @return secret number
 	 */
+	
 	public int play (GuessingGame game){
 	
 		boolean check = false;
