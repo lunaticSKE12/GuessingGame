@@ -1,6 +1,5 @@
 # GuessingGame
 
-================
 
 by Napong Dungduangsasitorn
 
