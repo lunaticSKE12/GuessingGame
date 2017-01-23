@@ -1,4 +1,4 @@
-"# GuessingGame" 
+# GuessingGame
 
 ================
 
