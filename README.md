@@ -1,7 +1,7 @@
 # GuessingGame
 
 
-by Napong Dungduangsasitorn
+By Napong Dungduangsasitorn 5710546216
 
 GuessingGame is programe guess number that can hint your number is less or more than answer
 
